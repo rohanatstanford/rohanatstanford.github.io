@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT - The Future of AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/openai.svg" alt="ChatGPT Logo">
+                ChatGPT
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#use-cases">Use Cases</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn btn-primary">Try ChatGPT</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <h1 class="hero-title">Experience the future of <span id="typing-text"></span></h1>
+                <p class="hero-subtitle">Your AI-powered companion for creativity, productivity, and learning.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                    <a href="#capabilities" class="btn btn-secondary">See Demo</a>
+                </div>
+            </div>
+            <div class="hero-background-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+        </section>
+
+        <section id="capabilities" class="capabilities-section hidden-fade">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Limitless Possibilities</h2>
+                    <p>Unlock your potential with advanced AI capabilities.</p>
+                </div>
+                <div class="demo-wrapper glass-card">
+                    <div class="demo-sidebar">
+                        <div class="sidebar-header">
+                            <span>New Chat</span>
+                            <button class="new-chat-btn">+</button>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item active" data-feature="writing">
+                                <span class="icon">✍️</span>
+                                <div class="text">
+                                    <span class="title">Creative Writing</span>
+                                    <span class="desc">Draft essays & stories</span>
+                                </div>
+                            </div>
+                            <div class="feature-item" data-feature="coding">
+                                <span class="icon">💻</span>
+                                <div class="text">
+                                    <span class="title">Coding Assistant</span>
+                                    <span class="desc">Debug & explain code</span>
+                                </div>
+                            </div>
+                            <div class="feature-item" data-feature="analysis">
+                                <span class="icon">📊</span>
+                                <div class="text">
+                                    <span class="title">Data Analysis</span>
+                                    <span class="desc">Visualize insights</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-footer">
+                            <div class="user-profile">
+                                <div class="avatar">U</div>
+                                <span>User Name</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-main">
+                        <div class="chat-header">
+                            <span class="model-name">ChatGPT 4.0</span>
+                        </div>
+                        <div class="chat-window" id="chat-window">
+                            <div class="empty-state">
+                                <div class="logo-large">
+                                    <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/openai.svg" alt="ChatGPT">
+                                </div>
+                                <h3>How can I help you today?</h3>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <div class="input-box">
+                                <input type="text" id="chat-input" placeholder="Message ChatGPT..." readonly>
+                                <button id="chat-send" class="send-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="disclaimer">ChatGPT can make mistakes. Consider checking important information.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" class="use-cases-section hidden-fade">
+            <div class="container">
+                <div class="section-header">
+                    <h2>For Work & Play</h2>
+                </div>
+                <div class="use-cases-layout">
+                    <div class="use-case-column personal">
+                        <h3>Personal</h3>
+                        <ul class="glass-list">
+                            <li>Plan a travel itinerary</li>
+                            <li>Learn a new language</li>
+                            <li>Create a workout plan</li>
+                            <li>Brainstorm gift ideas</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-column professional">
+                        <h3>Professional</h3>
+                        <ul class="glass-list">
+                            <li>Draft marketing copy</li>
+                            <li>Summarize meetings</li>
+                            <li>Debug complex code</li>
+                            <li>Analyze market trends</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section hidden-fade">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Trusted by Millions</h2>
+                </div>
+                <div class="testimonials-scroller">
+                    <div class="testimonial-card glass-card">
+                        <p>"It changed the way I work forever. A true productivity booster."</p>
+                        <span>- Sarah J., Designer</span>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <p>"The coding assistance is next level. I save hours every day."</p>
+                        <span>- Mark T., Developer</span>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <p>"My go-to tool for brainstorming and creative writing."</p>
+                        <span>- Emily R., Writer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section hidden-fade">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Choose Your Plan</h2>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card glass-card">
+                        <h3>Free</h3>
+                        <div class="price">$0<span>/mo</span></div>
+                        <ul>
+                            <li>Access to GPT-3.5</li>
+                            <li>Standard response speed</li>
+                            <li>Regular model updates</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary">Get Started</a>
+                    </div>
+                    <div class="pricing-card glass-card featured">
+                        <h3>Plus</h3>
+                        <div class="price">$20<span>/mo</span></div>
+                        <ul>
+                            <li>Access to GPT-4</li>
+                            <li>Faster response speed</li>
+                            <li>Priority access to new features</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Upgrade</a>
+                    </div>
+                    <div class="pricing-card glass-card">
+                        <h3>Team</h3>
+                        <div class="price">$30<span>/mo</span></div>
+                        <ul>
+                            <li>Everything in Plus</li>
+                            <li>Higher message caps</li>
+                            <li>Admin console</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">ChatGPT</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Help Center</a>
+            </div>
+            <div class="footer-copy">
+                Made solely for illustration purposes using fabricated data by Marketing Maniacs for MKTG 540, Winter 2026 using Cursor AI.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
