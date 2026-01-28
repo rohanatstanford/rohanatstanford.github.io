@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
             charIndex++;
             typeSpeed = 150;
         }
+        
+        // Ensure non-breaking space when empty to prevent layout shift
+        if (typingTextElement.textContent === '') {
+            typingTextElement.innerHTML = '&nbsp;';
+        }
 
         if (!isDeleting && charIndex === currentWord.length) {
             isDeleting = true;
@@ -45,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Demo Data Scenarios
     const demos = {
-        writing: {
-            prompt: "Write a haiku about artificial intelligence.",
-            response: "Silicon mind wakes,\nLearning from the world of men,\nFuture now begins."
+        review: {
+            prompt: "Review this email for tone: 'Hey, I need that report now.'",
+            response: "The tone is a bit abrupt. Consider: 'Hi, could you please send over that report when you have a moment?'"
         },
-        coding: {
-            prompt: "How do I center a div in CSS?",
-            response: "To center a div horizontally and vertically, you can use Flexbox:\n\n.parent {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}"
+        research: {
+            prompt: "Is it true that sharks are mammals?",
+            response: "No, that is incorrect. Sharks are fish (cartilaginous fish), not mammals. They breathe via gills."
         },
         analysis: {
             prompt: "Summarize the benefits of renewable energy.",
@@ -59,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    let currentFeature = 'writing';
+    let currentFeature = 'review';
     let isDemoRunning = false;
 
     // Feature Selection Logic
@@ -169,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Just set the active state and input, don't trigger full click logic to keep empty state
         featureItems.forEach(f => f.classList.remove('active'));
         featureItems[0].classList.add('active');
-        if (chatInput) chatInput.value = demos['writing'].prompt;
+        if (chatInput) chatInput.value = demos['review'].prompt;
     }
 
     // --- Intersection Observer for Animations & Demo Start ---
