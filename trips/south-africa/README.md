@@ -31,14 +31,19 @@ Fields in `trip.json`:
 - `reservations[]`, `budget[]` (`zar` or `usd`; points items add `points` + `unit` (+ `valueZar`); `status` is `paid`/`owed`/`tbd`), `todos`, `unbudgeted`, `tips`, `route`, `defaultRate`.
 
 ## Features
-- Itinerary with collapsible days, numbered pins and a route line per day. Click a stop to pan the map to it. Each stop has a Directions link to Google Maps.
-- Reservations you can search and filter. Tap a confirmation number to copy it, and tap a phone number to call.
-- **Files tab:** attach PDFs, boarding passes or screenshots to any booking. They are stored in the browser's IndexedDB **on that device only**. Nothing is uploaded, and the files are available offline. Add them on each phone or laptop you travel with.
-- Budget in ZAR and USD with an editable exchange rate, a donut chart by category, a paid vs. owed bar and every line item.
-- To-do list and notes, saved on the device.
-- **Claude recommendations:** optional suggestions with descriptions, marked with a purple ✨ badge and dashed border (star pins on the map). Edit them in `TRIP.recommendations`, or hide them with the toggle at the top of the Itinerary.
-- Export to calendar (`.ics`), light and dark mode, and a print layout.
-- **Offline:** open the page once while online, then tap **Save map offline**. This stores map tiles around every stop. On iPhone, use Share → Add to Home Screen.
+- **Wanderlog-style layout** (light mode): a sidebar with sections and a jump list of days, the itinerary in the middle and a live map on the right. On phones there are tabs at the top, a day strip, and a floating **Map** button.
+- **Add stops:** type in "Add a place to Day N" to search OpenStreetMap (or your saved places) and add a stop with a map pin. Use ↑ ↓ to reorder any stop, and ✎ / 🗑 to edit or remove the ones you added.
+- **Travel time between stops:** given times for booked legs, otherwise a straight-line estimate, each with a Directions link. Each day has a **↗ Route** button that opens the whole day as a multi-stop route in Google Maps.
+- **Map:** numbered, colour-coded pins and a route line per day. A day picker dims the other days. ★ pins are saved places and ✨ pins are Claude's ideas.
+- **Places to visit:** a wish list of saved places, each with an "Add to day…" option.
+- **Reservations:** searchable cards with copyable confirmation numbers, tap-to-call phone numbers and file attachments.
+- **Budget:** ZAR and USD with an editable exchange rate, a category donut, paid vs. owed, and an **Add expense** form.
+- **Files:** PDFs and passes stored on the device only, available offline.
+- **Notes & to-do**, plus **Sync**: export your changes as a file and import it on the other phone.
+- **Claude recommendations:** marked ✨ and can be hidden.
+- Calendar (.ics) export, print layout, and offline mode (open the map and tap **Save offline**).
+
+Things you add on the page (stops, places, expenses, notes) are saved in that browser. To make them permanent for everyone, copy them into `trip.json` and re-encrypt.
 
 ## URL options
 - `?private=1` gives a share-safe view. It hides confirmation numbers, phone numbers and costs, and removes the Budget and Files tabs.

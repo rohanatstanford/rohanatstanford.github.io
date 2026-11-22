@@ -1,5 +1,5 @@
 // Offline support: precache the app shell, runtime-cache CDN assets and map tiles.
-const VERSION = 'sa-trip-v3';
+const VERSION = 'sa-trip-v4';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js'];
