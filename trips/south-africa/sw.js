@@ -1,6 +1,6 @@
 // Offline support: precache the app shell, runtime-cache CDN assets and map tiles.
-const VERSION = 'sa-trip-v6';
-const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg',
+const VERSION = 'sa-trip-v7';
+const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg', './icon-180.png', './icon-192.png', './icon-512.png',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js'];
 self.addEventListener('install', e => {
