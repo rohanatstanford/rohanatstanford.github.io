@@ -5,5 +5,5 @@ compatibility_date = "2024-11-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "trip-sync"
-# Filled in after `wrangler d1 create trip-sync` prints the real id:
-database_id = "00000000-0000-0000-0000-000000000000"
+
+database_id = "12649a77-afd8-4169-b489-16c4c2cdd2c2"
